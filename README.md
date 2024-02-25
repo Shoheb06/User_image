@@ -16,10 +16,6 @@ This project creates a user-friendly web page that dynamically loads and display
 - Each image is accompanied by its name.
 - Responsive design for various screen sizes.
 
-## Demo
-
-You can view a live demo of the project [here](#).
-
 ## Getting Started
 
 To run this project locally, follow these steps:
@@ -48,10 +44,6 @@ Simply open the web page to view the user images. You can hover over the images 
 - Images provided by [Lorem Picsum](https://picsum.photos/).
 - Bootstrap CSS framework.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ---
 
-Make sure to replace `your-username` in the clone URL with your actual GitHub username. You can also add additional sections or modify the content as needed.
+
