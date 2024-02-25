@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Images</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px -10px;
+        }
+
+        .image-container .image-card {
+            flex: 0 0 calc(33.33% - 20px);
+            margin: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .image-container .image-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-container .image-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">User Images</h1>
+        <div class="row image-container" id="image-container"></div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        const imageData = [
+        { "image": "https://picsum.photos/200/200?random=1", "name": "Image 1" },
+    { "image": "https://picsum.photos/200/200?random=2", "name": "Image 2" },
+    { "image": "https://picsum.photos/200/200?random=3", "name": "Image 3" },
+    { "image": "https://picsum.photos/200/200?random=4", "name": "Image 4" },
+    { "image": "https://picsum.photos/200/200?random=5", "name": "Image 5" },
+    { "image": "https://picsum.photos/200/200?random=6", "name": "Image 6" },
+    { "image": "https://picsum.photos/200/200?random=7", "name": "Image 7" },
+    { "image": "https://picsum.photos/200/200?random=8", "name": "Image 8" },
+    { "image": "https://picsum.photos/200/200?random=9", "name": "Image 9" },
+    { "image": "https://picsum.photos/200/200?random=10", "name": "Image 10" },
+    { "image": "https://picsum.photos/200/200?random=11", "name": "Image 11" },
+    { "image": "https://picsum.photos/200/200?random=12", "name": "Image 12" },
+    { "image": "https://picsum.photos/200/200?random=13", "name": "Image 13" },
+    { "image": "https://picsum.photos/200/200?random=14", "name": "Image 14" },
+    { "image": "https://picsum.photos/200/200?random=15", "name": "Image 15" },
+    { "image": "https://picsum.photos/200/200?random=16", "name": "Image 16" },
+    { "image": "https://picsum.photos/200/200?random=17", "name": "Image 17" },
+    { "image": "https://picsum.photos/200/200?random=18", "name": "Image 18" },
+    { "image": "https://picsum.photos/200/200?random=19", "name": "Image 19" },
+    { "image": "https://picsum.photos/200/200?random=20", "name": "Image 20" },
+    { "image": "https://picsum.photos/200/200?random=21", "name": "Image 21" },
+    { "image": "https://picsum.photos/200/200?random=22", "name": "Image 22" },
+    { "image": "https://picsum.photos/200/200?random=23", "name": "Image 23" },
+    { "image": "https://picsum.photos/200/200?random=24", "name": "Image 24" },
+    { "image": "https://picsum.photos/200/200?random=25", "name": "Image 25" }
+        ];
+
+        const imageContainer = document.getElementById('image-container');
+
+        imageData.forEach(imageObject => {
+            const imageCard = document.createElement('div');
+            imageCard.classList.add('col-md-4', 'image-card');
+
+            const image = document.createElement('img');
+            image.src = imageObject.image;
+            image.alt = "User Image";
+
+            const imageName = document.createElement('p');
+            imageName.textContent = imageObject.name;
+            imageName.classList.add('text-center', 'mt-2');
+
+            imageCard.appendChild(image);
+            imageCard.appendChild(imageName);
+
+            imageContainer.appendChild(imageCard);
+        });
+    </script>
+</body>
+</html>
