@@ -23,7 +23,7 @@ To run this project locally, follow these steps:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/your-username/user-images-viewer.git
+   [git clone https://github.com/your-username/user-images-viewer.git](https://github.com/Shoheb06/User_image.git)
    ```
 
 2. Open the `index.html` file in your web browser.
